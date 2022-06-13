@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{background: rgb(58, 192, 233)}
+.date{font-size: 11px}
+.comment-text{font-size: 12px}
+.fs-12{font-size: 12px}
+.shadow-none{box-shadow: none}
+.name{color: #007bff}
+.cursor:hover{color: blue}
+.cursor{cursor: pointer}
+.textarea{resize: none}

@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 use App\Models\Post;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +38,9 @@ Route::get('/dashboard', function () {
 Route::get('/', [Controller::class, 'home']);
 
 // Post
-Route::post('/posted', [PostController::class, 'add_post'])->name('addpost');
+Route::post('/posted', [PostController::class,'add_post'])->name('addpost');
+// landingpage
+Route::get('/landing', [Controller::class,'landingpage'])->name('landingpage');
+
+// logged-in-user-home
+Route::post('/home', [PostController::class,"add_post2"])->name('addpost2')->middleware('auth');
